@@ -5,6 +5,13 @@ public class Main implements Generator, User, BullsAndCows {
 
         Generator.generateRandomCode();
 
+        for (int i = 0; i < 4; i++) {
+            bull.add(false);
+            cow.add(false);
+            compare.add(true);
+            checkBullIndex.add(false);
+        }
+
         System.out.println();
         System.out.println(Generator.secretCode);
         User.input();
