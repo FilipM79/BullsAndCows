@@ -5,19 +5,19 @@ import java.util.List;
 import java.util.Objects;
 
 public interface BullsAndCows extends Generator {
-    List<Boolean> bull = new ArrayList<>(4);
-    List<Boolean> cow = new ArrayList<>(4);
-    List<Boolean> checkBullIndex = new ArrayList<>(4);
-    List<Boolean> compare = new ArrayList<>(4);
+    List<Boolean> bull = new ArrayList<>();
+    List<Boolean> cow = new ArrayList<>();
+    List<Boolean> checkBullIndex = new ArrayList<>();
+    List<Boolean> compare = new ArrayList<>();
 
-    static void check () {
+    static void check (int length) {
 
         int bullCount = 0;
         int cowCount = 0;
         double codeOccurrences = 0;
         double inputOccurrences = 0;
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < length; i++) {
             checkBullIndex.set(i, Objects.equals(User.userGuess.get(i), secretCode.get(i)));
         }
 
@@ -37,7 +37,8 @@ public interface BullsAndCows extends Generator {
 
             if (clonedCode.contains(User.userGuess.get(i)) &&
                     !Objects.equals(User.userGuess.get(i), secretCode.get(i)) &&
-                    !checkBullIndex.get(secretCode.indexOf(User.userGuess.get(i))) && cowCount <= codeOccurrences / 4 ) {
+                    !checkBullIndex.get(secretCode.indexOf(User.userGuess.get(i))) &&
+                    cowCount <= Math.ceil(codeOccurrences / 3) ) { // problem
 
                 cow.set(i, true);
                 cowCount++;
