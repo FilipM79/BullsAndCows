@@ -7,10 +7,10 @@ public interface User extends BullsAndCows {
     List<Integer> userGuess = new ArrayList<>();
 
 
-    static void input() {
-        int counter = 0;
-        System.out.println("Turn " + counter + ". Answer:");
-        System.out.println("> ");
+    static void input(int counter) {
+
+        System.out.println("\nTurn " + counter + ". Answer:");
+        System.out.print("> ");
 
         List<String> inputCode = List.of(scanner.nextLine().split(""));
 

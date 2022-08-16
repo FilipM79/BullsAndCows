@@ -4,8 +4,8 @@ import java.util.*;
 
 public interface Generator {
     Random random = new Random();
-    List<Integer> secretCode = new ArrayList<>();
-    List<Integer> clonedCode = new ArrayList<>();
+    List<Integer> secretCode = new ArrayList<>(4);
+    List<Integer> clonedCode = new ArrayList<>(4);
 
     static void generateRandomCode() {
         for (int i = 0; i < 4; i++) {
@@ -16,11 +16,10 @@ public interface Generator {
             }
         }
 
+
+
         clonedCode.addAll(secretCode);
 
         System.out.print("The secret code is prepared: ****.");
-//        for (int j: secretCode) {
-//            System.out.print(j);
-//        } System.out.println(".");
     }
 }
