@@ -26,7 +26,7 @@ public interface BullsAndCows extends Generator {
             bull.set(i, false);
             cow.set(i, false);
 
-            for (int j = 0; j < 4; j++) {
+            for (int j = 0; j < length; j++) {
                 if (Objects.equals(User.userGuess.get(i), secretCode.get(j))) {
                   codeOccurrences++;
                 }
