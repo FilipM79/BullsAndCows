@@ -27,11 +27,11 @@ public class Main implements Generator, User, BullsAndCows {
 
             if (Objects.equals(codeLengthFromInput1, "")) {
                 System.out.println("Error, the input is empty\n");
-                properInput = true;
+//                properInput = true;
 
             } else if (codeLengthFromInput1.length() > 2) {
                 System.out.println("Error: " + codeLengthFromInput1 + " isn't a valid input.\n");
-                properInput = true;
+//                properInput = true;
 
             } else if (codeLengthFromInput1.length() > 0) {
                 i1 = Integer.parseInt(String.valueOf((byte) codeLengthFromInput1.charAt(0))) - 48;
@@ -44,7 +44,7 @@ public class Main implements Generator, User, BullsAndCows {
 
                 if (i1 > 10 || i2 > 10) {
                     System.out.println("Error: " + codeLengthFromInput1 + " isn't a valid number.\n");
-                    properInput = true;
+//                    properInput = true;
 
                 } else {
 
@@ -54,29 +54,28 @@ public class Main implements Generator, User, BullsAndCows {
 
                     } else {
                         System.out.println("Error: length of the code must be between 1 and 36 (1-36).\n");
-                        properInput = true;
-
+//                        properInput = true;
                     }
                 }
             }
 
             else System.out.println("Error: " + codeLengthFromInput1 + " isn't a valid input.\n");
-            properInput = true;
+//            properInput = true;
         }
 
         while (!properInput2) {
 
-            System.out.println("Input the number of possible symbols in the code (0-36):");
+            System.out.println("Input the number of possible symbols in the code (1-36):");
             System.out.print("> ");
             codeRangeFromInput2 = scanner.nextLine();
 
             if (Objects.equals(codeRangeFromInput2, "")) {
                 System.out.println("Error, the input is empty\n");
-                properInput2 = true;
+//                properInput2 = true;
 
             } else if (codeRangeFromInput2.length() > 2) {
                 System.out.println("Error: " + codeRangeFromInput2 + " isn't a valid input.\n");
-                properInput2 = true;
+//                properInput2 = true;
 
             } else if (codeRangeFromInput2.length() > 0) {
                 i1 = Integer.parseInt(String.valueOf((byte) codeRangeFromInput2.charAt(0))) - 48;
@@ -90,11 +89,11 @@ public class Main implements Generator, User, BullsAndCows {
                 if (codeRange < codeLength) {
                     System.out.println("Error: it's not possible to generate a code with a length of "
                             + codeLength + " with " + codeRange + " unique symbols.\n");
-                    properInput2 = true;
+//                    properInput2 = true;
 
                 } else if (i1 > 10 || i2 > 10) {
                     System.out.println("Error: " + codeRangeFromInput2 + " isn't a valid number.\n");
-                    properInput2 = true;
+//                    properInput2 = true;
 
                 } else {
 
@@ -104,14 +103,14 @@ public class Main implements Generator, User, BullsAndCows {
 
                     } else {
                         System.out.println("Error: maximum number of possible symbols in the code is 36 (0-9, a-z).\n");
-                        properInput2 = true;
+//                        properInput2 = true;
 
                     }
                 }
             }
 
             else System.out.println("Error: " + codeRangeFromInput2 + " isn't a valid input.\n");
-            properInput2 = true;
+//            properInput2 = true;
         }
 
         while (!condition3) {
